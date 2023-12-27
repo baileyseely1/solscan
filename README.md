@@ -21,7 +21,7 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
 ## Technologies Used 🧰
 
 - **Frontend:** React, HTML, CSS
-- **Backend/API:** Flask, Python
+- **Backend/API:** Python, Flask, Nginx
 - **Data Scraping:** Telethon, Python
 - **Hosting:** Amazon EC2
 - **Others:** Git
