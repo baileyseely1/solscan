@@ -53,14 +53,14 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
 
 - Open the directory in your favourite text-editor and navigate to App.jsx. From there, change this line of code to fetch from your local host api.
 
-    ```bash
- useEffect(() => {
+  ```bash
+  useEffect(() => {
     async function getTokenData() {
       setLoading(true);
       try {
         const res = await 
-fetch("http://localhost:5000/get-data");
-// change this line ^^^^       
+     fetch("http://localhost:5000/get-data");
+  // change this line ^^^^       
     ```
 
  - Start the vite/react server
