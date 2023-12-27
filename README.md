@@ -45,10 +45,27 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
     cd solscan
     ```
 
- - Install npm dependencies & start the react application.
+ - Install npm dependencies
  
     ```bash
    npm i
+    ```
+
+- Open the directory in your favourite text-editor and navigate to App.jsx. From there, change this line of code to fetch from your local host api.
+
+    ```bash
+ useEffect(() => {
+    async function getTokenData() {
+      setLoading(true);
+      try {
+        const res = await 
+fetch("http://localhost:5000/get-data");
+// change this line ^^^^       
+    ```
+
+ - Start the vite/react server
+
+    ```bash
    npm run dev
     ```
 
@@ -60,15 +77,16 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
     git clone https://github.com/baileyseely1/simulation.git
     cd simluation
     ```
-    
-    - Install Python dependencies.
+
+- Install Python dependencies.
       
 
     ```bash
     pip install -r requirements.txt
     ```
+    
    
-   - Open a separate terminal and start the scraping
+- Open a separate terminal and start the scraping
      
 
     ```bash
@@ -89,9 +107,8 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
 - Leave both the scraper and server running locally to ensure up-to-date data. Otherwise, you can leave them running on an amazon aw2 instance with relative ease.
 
 
-
-
 3. **Access the Application:**
+
     - Open your browser and navigate to http://localhost:5173.
 
 ## Contribution Guidelines 🤝
