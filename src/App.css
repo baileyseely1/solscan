@@ -107,7 +107,7 @@ header {
   gap: 2em;
   padding: 0 2em;
   opacity: 0; /* Set initial opacity to 0 */
-  animation: slideInFromLeft 1s ease-in-out forwards; /* Apply the fade-in animation */
+  animation: slideInFromLeft 0.75s ease-in-out forwards; /* Apply the fade-in animation */
 }
 
 .loading {
@@ -139,7 +139,7 @@ header {
 }
 
 .sol-gradient-fast {
-  animation: gradientAnimation 3s linear infinite;
+  animation: gradientAnimation 5s linear infinite;
 }
 
 /* animations */
