@@ -76,7 +76,7 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
  
     ```bash
     git clone https://github.com/baileyseely1/simulation.git
-    cd simluation
+    cd simulation
     ```
 
 - Install Python dependencies.
