@@ -10,8 +10,6 @@ function App() {
   const [intro, setIntro] = useState(true);
   const [displayedCount, setDisplayedCount] = useState(20); // Starting with 20 items
 
-  console.log(tokenData.slice(1, 20));
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIntro(false);
@@ -22,9 +20,7 @@ function App() {
     async function getTokenData() {
       setLoading(true);
       try {
-        const res = await fetch(
-          "http://ec2-3-133-117-179.us-east-2.compute.amazonaws.com:8000/get-data"
-        );
+        const res = await fetch("https://api.snipeonsol.xyz:8000/get-data");
         const data = await res.json();
         // setTokenData state to the now reversed arr from api so the arr is formatted properly
         setTokenData(reverseArray(data));
