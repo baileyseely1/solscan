@@ -29,7 +29,13 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
 
 ## TODO:
 
-- **DB:** Incorporate a database instead of writing to JSON which is dramatically worse in comparison.  I will probably use google's firestore. 
+- **DB:** Incorporate a database instead of writing to the JSON file which is dramatically worse in comparison (performance + scalability wise).  I will probably use google's firestore.
+
+- **React:**
+    
+    - Write unit and integration tests
+    - Incorporate a better way to implement the infinite scrolling
+    - Optimize for performance in general (only fetch chunks of data as user scrolls to reduce initial load time?)
 
 ## Setup and Installation 🚀
 
