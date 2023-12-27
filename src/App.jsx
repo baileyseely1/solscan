@@ -9,6 +9,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [intro, setIntro] = useState(true);
   const [displayedCount, setDisplayedCount] = useState(20); // Starting with 20 items
+  const apiUrl =
+    "http://ec2-3-133-117-179.us-east-2.compute.amazonaws.com:8000/get-data";
 
   useEffect(() => {
     const timer = setTimeout(() => {
