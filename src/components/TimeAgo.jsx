@@ -5,7 +5,6 @@ export default ({ timestamp }) => {
 
   useEffect(() => {
     if (!timestamp) {
-      // No timestamp provided, set to "Unknown" or any other default message
       setTimeAgo("deployed: unknown");
       return;
     }
@@ -18,7 +17,7 @@ export default ({ timestamp }) => {
 
     const updateAgoTime = () => {
       const currentTime = new Date();
-      const timestampDate = new Date(timestamp.replace(" ", "T")); // Convert to ISO format
+      const timestampDate = new Date(timestamp.replace(" ", "T") + "Z"); // Convert to ISO format
       const timeDifference = currentTime - timestampDate;
 
       if (timeDifference < 60000) {
