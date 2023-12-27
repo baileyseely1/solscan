@@ -62,12 +62,14 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
     ```
     
     - Install Python dependencies.
+      
 
     ```bash
     pip install -r requirements.txt
     ```
    
    - Open a separate terminal and start the scraping
+     
 
     ```bash
     cd simulation
@@ -75,11 +77,18 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
     ```
 
 - Open a second terminal and start the server application which will host the API
+  
 
     ```bash
     cd simulation
     python3 server.py
     ```
+
+
+
+- Leave both the scraper and server running locally to ensure up-to-date data. Otherwise, you can leave them running on an amazon aw2 instance with relative ease.
+
+
 
 
 3. **Access the Application:**
