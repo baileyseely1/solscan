@@ -20,7 +20,7 @@ function App() {
     async function getTokenData() {
       setLoading(true);
       try {
-        const res = await fetch("https://api.snipeonsol.xyz:8000/get-data");
+        const res = await fetch("http://api.snipeonsol.xyz:8000/get-data");
         const data = await res.json();
         // setTokenData state to the now reversed arr from api so the arr is formatted properly
         setTokenData(reverseArray(data));
