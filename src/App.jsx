@@ -33,6 +33,8 @@ function App() {
     getTokenData();
   }, []);
 
+  // scuffed infinite scroll
+
   useEffect(() => {
     const handleScroll = () => {
       const nearBottom =
