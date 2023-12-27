@@ -7,6 +7,7 @@ import { reverseArray } from "./utils";
 function App() {
   const [tokenData, setTokenData] = useState([]);
   const [loading, setLoading] = useState(null);
+  const [displayedCount, setDisplayedCount] = useState(20); // Starting with 20 items
 
   console.log(tokenData);
 
@@ -28,7 +29,22 @@ function App() {
     }, 5000);
   }, []);
 
-  const tokenCards = tokenData.map((token) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + document.documentElement.scrollTop !==
+        document.documentElement.offsetHeight
+      )
+        return;
+      setDisplayedCount((prevCount) => prevCount + 20); // Load 20 more items
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const tokenCards = tokenData.slice(0, displayedCount).map((token) => {
     return <Card key={token.contract_address} token={token} />;
   });
 

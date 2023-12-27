@@ -6,14 +6,19 @@ import { reverseArray } from "./utils";
 
 function App() {
   const [tokenData, setTokenData] = useState([]);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [intro, setIntro] = useState(true);
   const [displayedCount, setDisplayedCount] = useState(20); // Starting with 20 items
 
-  console.log(tokenData);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIntro(false);
+    }, 3000);
+  });
 
   useEffect(() => {
-    setLoading(true);
     async function getTokenData() {
+      setLoading(true);
       try {
         const res = await fetch("http://localhost:5000/get-data");
         const data = await res.json();
@@ -21,34 +26,31 @@ function App() {
         setTokenData(reverseArray(data));
       } catch (err) {
         err ? console.log(err) : null;
+      } finally {
+        setLoading(false);
       }
     }
-    setInterval(() => {
-      getTokenData();
-      setLoading(false);
-    }, 5000);
+    getTokenData();
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop !==
-        document.documentElement.offsetHeight
-      )
-        return;
-      setDisplayedCount((prevCount) => prevCount + 20); // Load 20 more items
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+      if (nearBottom && !loading) {
+        setDisplayedCount((prevCount) => prevCount + 20);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [loading]);
 
   const tokenCards = tokenData.slice(0, displayedCount).map((token) => {
     return <Card key={token.contract_address} token={token} />;
   });
 
-  return loading ? (
+  return loading || intro ? (
     <div className="loading-div">
       <img src="pepesniper1.png" alt="" width="125px" />
       <h1 className="sol-gradient-fast loading">loading shitcoins</h1>
