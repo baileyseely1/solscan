@@ -30,6 +30,11 @@ header {
   margin: 0 2em;
   width: 100%;
   max-width: 550px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  opacity: 0;
+  transform: scale(0.8); /* Initial scale, you can adjust this as needed */
+  animation: scaleFadeIn 0.3s ease-in-out forwards;
 }
 
 .flex {
@@ -87,6 +92,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: slideInFromLeft 1s ease-in-out forwards; /* Apply the fade-in animation */
 }
 
 .loading {
@@ -142,9 +149,20 @@ header {
   }
 }
 
+@keyframes scaleFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 header {
   animation-name: slideInFromLeft;
-  animation-duration: 0.75s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
   transform: translateZ(0); /* Force hardware acceleration */
   animation-timing-function: ease-out; /* Experiment with this */
