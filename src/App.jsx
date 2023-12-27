@@ -22,7 +22,7 @@ function App() {
     async function getTokenData() {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/get-data");
+        const res = await fetch({ apiUrl });
         const data = await res.json();
         // setTokenData state to the now reversed arr from api so the arr is formatted properly
         setTokenData(reverseArray(data));
