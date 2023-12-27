@@ -48,7 +48,7 @@ export default ({ token }) => {
         <h1 className="token-symbol">{ticker}</h1>
       </div>
       <TimeAgo timestamp={`${timestamp}`} />
-      <div className="flex">
+      <div className="flex gap-1">
         <h3 className="ca-name">
           CA / DS:{" "}
           <a
@@ -63,7 +63,7 @@ export default ({ token }) => {
         </h3>
       </div>
 
-      <div className="flex">
+      <div className="flex gap-1">
         <h3 className="ca-name">
           Deployer:{" "}
           <a
