@@ -1,10 +1,10 @@
 # SnipeOnSol 🚀
 
-SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from a Telegram channel which monitors new deployments on the Solana blockchain and then present them through a React-based frontend. 🌐 
+SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from a telegram channel which monitors new deployments on the Solana blockchain and then present them through a React-based frontend. 🌐 
 
 ## Features ✨
 
-- **Data Scraping:** Utilizes Telethon to scrape data in real-time from a telegram channel monitoring new deploys on the Solana blockchain. 🤖
+- **Data Scraping:** Utilizes Telethon to scrape telegram data in real-time. 🤖
 - **Data Processing:** Efficiently processes and structures scraped data for easy consumption. 📊
 - **API:** Flask-based RESTful API serves the processed data, ready to be consumed by the frontend. 🌐
 - **Frontend:** Sleek and responsive frontend built with React, displaying data in an intuitive interface. 💻
