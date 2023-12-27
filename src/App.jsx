@@ -21,7 +21,7 @@ function App() {
       setLoading(true);
       try {
         const res = await fetch(
-          "http://ec2-3-133-117-179.us-east-2.compute.amazonaws.com:8000/get-data"
+          "https://ec2-3-133-117-179.us-east-2.compute.amazonaws.com:8000/get-data"
         );
         const data = await res.json();
         // setTokenData state to the now reversed arr from api so the arr is formatted properly
