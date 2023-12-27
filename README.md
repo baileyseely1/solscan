@@ -12,7 +12,7 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
 
 ## How It Works 🛠️
 
-1. **Scraping:** The Python-based scraper runs continuously, collecting data from Telegram channels.
+1. **Scraping:** The Python-based scraper runs continuously, collecting data from the specified telegram channel.
 2. **Processing:** Data is processed and stored in a JSON file, ensuring ease of access and manipulation.
 3. **API:** The Flask API reads the JSON file and serves the data to the frontend application.
 4. **Frontend:** The frontend fetches this data and displays it, providing users with up-to-date information.
