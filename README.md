@@ -26,6 +26,11 @@ SnipeOnSol is a cutting-edge application designed to seamlessly scrape data from
 - **Hosting:** Amazon EC2
 - **Deployment:** Netlify
 - **Others:** Git
+
+## TODO:
+
+- **DB:** Incorporate a database instead of writing to JSON which is dramatically worse in comparison.  I will probably use google's firestore. 
+
 ## Setup and Installation 🚀
 
 ### Prerequisites
