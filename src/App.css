@@ -71,7 +71,6 @@ header {
 /* card content */
 
 .token-name-container {
-  flex-direction: column;
   padding: 0 1em;
   gap: 1.25em;
 }
