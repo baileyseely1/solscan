@@ -84,36 +84,30 @@ export default ({ token }) => {
       <h3>Creator Sol Balance: {creatorBalance}</h3>
       <h3>Total Supply: {totalSupply}</h3>
       <h3>Transactions: {transactions}</h3>
-      <h3>
-        Telegram:{" "}
-        {telegram !== "Unknown" ? (
+      {telegram !== "Unknown" && (
+        <h3>
+          Telegram:{" "}
           <a target="_blank" href={telegram}>
             {telegram}
           </a>
-        ) : (
-          "not found"
-        )}
-      </h3>
-      <h3>
-        Twitter:{" "}
-        {twitter !== "Unknown" ? (
+        </h3>
+      )}
+      {twitter !== "Unknown" && (
+        <h3>
+          Twitter:{" "}
           <a target="_blank" href={twitter}>
             {twitter}
           </a>
-        ) : (
-          "not found"
-        )}
-      </h3>
-      <h3>
-        Website:{" "}
-        {filteredWebsite !== "Unknown" ? (
+        </h3>
+      )}
+      {filteredWebsite !== "Unknown" && (
+        <h3>
+          Website:{" "}
           <a target="_blank" href={filteredWebsite}>
             {filteredWebsite}
           </a>
-        ) : (
-          "not found"
-        )}
-      </h3>
+        </h3>
+      )}
     </div>
   );
 };
