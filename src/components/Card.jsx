@@ -95,7 +95,7 @@ export default ({ token }) => {
         )}
       </h3>
       <h3>
-        Twiter:{" "}
+        Twitter:{" "}
         {twitter !== "Unknown" ? (
           <a target="_blank" href={twitter}>
             {twitter}
